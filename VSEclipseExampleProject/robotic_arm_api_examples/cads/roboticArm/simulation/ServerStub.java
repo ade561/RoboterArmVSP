@@ -29,9 +29,13 @@ public class ServerStub {
     private static int changePosition(boolean increase) {
         return position += (increase ? 2 : -2);
     }
+    
+
 
     public static void move(ICaDSRoboticArm robot, String direction, boolean increase) {
-        position = changePosition(increase);
+    	if((!direction.equals("openGrip")) || (!direction.equals("closeGrip"))) {
+    		position = changePosition(increase);
+    	}
         switch (direction.toLowerCase()) {
             case "leftright":
                 robot.setLeftRightPercentageTo(position);
@@ -42,6 +46,12 @@ public class ServerStub {
             case "backforth":
                 robot.setBackForthPercentageTo(position);
                 break;
+            case "openGrip":
+            	robot.setOpenClosePercentageTo(100);
+            	break;
+            case "closeGrip":
+            	robot.setOpenClosePercentageTo(0);
+            	break;
             default:
                 System.out.printf("[Warnung] Ungültige Richtung: %s\n", direction);
                 break;
@@ -68,6 +78,12 @@ public class ServerStub {
             case 6:
                 move(robot, "backforth", false);
                 break;
+            case 7:
+            	move(robot,"openGrip",true);
+            	break;
+            case 8:
+            	move(robot,"closeGrip",false);
+            	break;
             default:
                 System.out.printf("[Unbekannte Funktion] ID = %d\n", functionId);
                 break;
