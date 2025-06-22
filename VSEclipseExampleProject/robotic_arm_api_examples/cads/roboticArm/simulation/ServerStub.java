@@ -3,12 +3,31 @@ package cads.roboticArm.simulation;
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 
 public class ServerStub {
     private static int position = 50;
-
+    
+    private ResponseSender responseSender;
+    private int srcPort;
+    private int dstPort;
+    private int seqNumber;
+    private String srcIp;
+    private String dstIp;
+    
+    public ServerStub(String srcIp, int srcPort) {
+        this.srcIp = srcIp;
+        this.srcPort = srcPort;
+        this.responseSender = new ResponseSender();
+    }
+    
+    
+    
+  
     private static int changePosition(boolean increase) {
-        return position += (increase ? 5 : -5);
+        return position += (increase ? 2 : -2);
     }
 
     public static void move(ICaDSRoboticArm robot, String direction, boolean increase) {
@@ -55,7 +74,7 @@ public class ServerStub {
         }
     }
 
-    public static void unmarshallingMessage(byte[] raw, int len, ICaDSRoboticArm robot) {
+    public void unmarshallingMessage(byte[] raw, int len, ICaDSRoboticArm robot) {
         // Überprüfe, ob die Nachricht die erwartete Länge hat
         if (len != 24) {
             System.out.printf("[Warnung] Ungültige Nachrichtenlänge: %d (erwartet: 24)\n", len);
@@ -73,6 +92,12 @@ public class ServerStub {
         int srcPort = ((raw[8] & 0xFF) << 8) | (raw[9] & 0xFF);
         int dstPort = ((raw[10] & 0xFF) << 8) | (raw[11] & 0xFF);
 
+        if (dstPort != getSrcPort() && !(dstIP.equals(getDstIp()))) {
+            System.out.printf("[Warnung] nicht für mich bestimmt\n");
+            return;
+        }
+        
+        
         // Extrahiere die Funktion ID (Big Endian)
         int functionId = ((raw[12] & 0xFF) << 24) |
                          ((raw[13] & 0xFF) << 16) |
@@ -91,19 +116,20 @@ public class ServerStub {
                                ((raw[len - 3] & 0xFF) << 16) |
                                ((raw[len - 2] & 0xFF) << 8) |
                                (raw[len - 1] & 0xFF);
-
-        //System.out.printf("[info] Payload: %d\n", functionId);
-        //System.out.printf("[info] SeqNumber: %d\n", seqNumber);
-        //System.out.printf("[info] Checksumme: %d\n", checksumReceived);
-
         
         if (checksumCalculated != checksumReceived) {
             System.out.printf("[Warnung] Ungültige Checksumme: Erwartet %d, empfangen %d\n", checksumCalculated, checksumReceived);
             return;
         }
 
+        
+        setDstIp(srcIP);
+        setDstPort(srcPort);
+        setSeqNumber(seqNumber);
+        
         // Führe den Befehl aus
         dispatchCommand(functionId, robot);
+        responseSender.sendResponse(getDstIp(), getDstPort(), getSrcIp(), getSrcPort(), functionId, getSeqNumber());
     }
 
     // Berechne die Checksumme, die mit der Nachricht übertragen wurde (exklusive Checksumme selbst)
@@ -115,8 +141,19 @@ public class ServerStub {
         return checksum;
     }
 
-    public static String readLine() throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        return reader.readLine();
-    }
+
+                
+        public String getSrcIp() { return srcIp; }
+        public String getDstIp() { return dstIp; }
+        public int getSrcPort() { return srcPort; }
+        public int getDstPort() { return dstPort; }
+        public int getSeqNumber() { return seqNumber; }
+
+        // ✅ Setter
+        public void setSrcIp(String srcIp) { this.srcIp = srcIp; }
+        public void setDstIp(String dstIp) { this.dstIp = dstIp; }
+        public void setSrcPort(int srcPort) { this.srcPort = srcPort; }
+        public void setDstPort(int dstPort) { this.dstPort = dstPort; }
+        public void setSeqNumber(int seqNumber) { this.seqNumber = seqNumber; }
+
 }

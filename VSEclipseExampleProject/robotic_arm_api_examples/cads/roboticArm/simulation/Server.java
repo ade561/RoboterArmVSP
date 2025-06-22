@@ -19,18 +19,13 @@ public class Server {
     private static final int PORT = 8080;
     private static ICaDSRoboticArm simulation;
 
-    public static String readLine() throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        return reader.readLine();
-    }
-
     public static void main(String[] args) {
         try {
         	//Roboter erstellen
             simulation = new CaDSRoboticArmSimulation();
-
             // Socket erstellen
             DatagramSocket socket = new DatagramSocket(PORT, InetAddress.getByName(IP_ADDRESS));
+            ServerStub stub = new ServerStub(IP_ADDRESS, PORT);
             System.out.printf("UDP Server running on Port %d and address %s...\n", PORT, IP_ADDRESS);
 
             // Nachrichtenverarbeitung
@@ -42,7 +37,7 @@ public class Server {
                 socket.receive(packet);
                 
                 // Nachricht verarbeiten
-                ServerStub.unmarshallingMessage(buffer, packet.getLength(),simulation);
+                stub.unmarshallingMessage(buffer, packet.getLength(),simulation);
             }
         } catch (Exception e) {
             e.printStackTrace();
