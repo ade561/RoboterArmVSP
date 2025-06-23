@@ -6,8 +6,15 @@ import java.net.InetAddress;
 
 public class ResponseSender {
 
+    private DatagramSocket socket;
+
+    // Neuer Konstruktor mit Socket
+    public ResponseSender(DatagramSocket socket) {
+        this.socket = socket;
+    }
+
     public void sendResponse(String dstIP, int dstPort, String srcIP, int srcPort,
-                                    int functionId, int seqNumber) {
+                             int functionId, int seqNumber) {
         try {
             byte[] message = new byte[24];
 
@@ -51,13 +58,11 @@ public class ResponseSender {
             message[22] = (byte) (checksum >> 8);
             message[23] = (byte) (checksum);
 
-            // 7. UDP senden
-            DatagramSocket socket = new DatagramSocket();
-            InetAddress address = InetAddress.getByName(dstIP); // ← Mikrocontroller IP
-            DatagramPacket packet = new DatagramPacket(message, message.length, address, dstPort); // Ziel = Client
+            // 7. UDP senden über den übergebenen Socket
+            InetAddress address = InetAddress.getByName(dstIP);
+            DatagramPacket packet = new DatagramPacket(message, message.length, address, dstPort);
 
             socket.send(packet);
-            socket.close();
 
             System.out.printf("[info] Antwort gesendet an %s:%d (Funktion: %d, Seq: %d)\n", dstIP, dstPort, functionId, seqNumber);
 

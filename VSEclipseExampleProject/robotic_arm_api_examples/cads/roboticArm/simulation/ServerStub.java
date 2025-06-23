@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.Socket;
 
 public class ServerStub {
     private static int position = 50;
@@ -16,13 +17,14 @@ public class ServerStub {
     private int seqNumber;
     private String srcIp;
     private String dstIp;
+    private DatagramSocket socket;
     
-    public ServerStub(String srcIp, int srcPort) {
+    public ServerStub(String srcIp, int srcPort, DatagramSocket socket) {
         this.srcIp = srcIp;
         this.srcPort = srcPort;
-        this.responseSender = new ResponseSender();
+        this.socket = socket; // ✅ Socket speichern
+        this.responseSender = new ResponseSender(this.socket); // ✅ Jetzt korrekt
     }
-    
     
     
   
@@ -155,6 +157,11 @@ public class ServerStub {
             checksum += (raw[i] & 0xFF);
         }
         return checksum;
+    }
+    
+    
+    public void sendHeartbeat() {
+	    responseSender.sendResponse(getDstIp(), getDstPort(), getSrcIp(), getSrcPort(), 13, getSeqNumber());
     }
 
 
