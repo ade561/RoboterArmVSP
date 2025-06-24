@@ -15,12 +15,12 @@ public class HeartbeatSender extends Thread {
                 // Warte, bis eine gültige Zieladresse da ist
                 if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0) {
                     serverStub.sendHeartbeat();
-                    System.out.println("[Heartbeat] gesendet an " + serverStub.getDstIp() + ":" + serverStub.getDstPort());
+                    //System.out.println("[Heartbeat] gesendet an " + serverStub.getDstIp() + ":" + serverStub.getDstPort());
                 } else {
-                    System.out.println("[Heartbeat] Kein Client verbunden. Warte...");
+                    //System.out.println("[Heartbeat] Kein Client verbunden. Warte...");
                 }
                 
-                Thread.sleep(2000); // Warte 2 Sekunden
+                Thread.sleep(500); // Warte 2 Sekunden
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;

@@ -23,15 +23,16 @@ public class Server {
         try {
         	//Roboter erstellen
             simulation = new CaDSRoboticArmSimulation();
+            simulation.init();
             // Socket erstellen
             DatagramSocket socket = new DatagramSocket(PORT, InetAddress.getByName(IP_ADDRESS));
             ServerStub stub = new ServerStub(IP_ADDRESS, PORT, socket);
 
-            //HeartbeatSender heartbeatSender = new HeartbeatSender(stub);
+            HeartbeatSender heartbeatSender = new HeartbeatSender(stub);
             
             System.out.printf("UDP Server running on Port %d and address %s...\n", PORT, IP_ADDRESS);
 
-            //heartbeatSender.start();
+            heartbeatSender.start();
             // Nachrichtenverarbeitung
             while (true) {
                 byte[] buffer = new byte[BUFFER_SIZE];

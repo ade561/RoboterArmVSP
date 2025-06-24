@@ -22,14 +22,19 @@ public class ServerStub {
     public ServerStub(String srcIp, int srcPort, DatagramSocket socket) {
         this.srcIp = srcIp;
         this.srcPort = srcPort;
-        this.socket = socket; // ✅ Socket speichern
-        this.responseSender = new ResponseSender(this.socket); // ✅ Jetzt korrekt
+        this.socket = socket; 
+        this.responseSender = new ResponseSender(this.socket); 
     }
     
     
   
     private static int changePosition(boolean increase) {
-        return position += (increase ? 2 : -2);
+    	if(increase == true && (position + 2) > 100) {
+    		return position = 100;
+    	}else if(increase != true && (position - 2) < 0) {
+    		return position = 0;
+    	}
+    	return position += (increase ? 2 : -2);
     }
     
 
@@ -41,18 +46,23 @@ public class ServerStub {
         switch (direction.toLowerCase()) {
             case "leftright":
                 robot.setLeftRightPercentageTo(position);
+                robot.waitUntilInitIsFinished();
                 break;
             case "updown":
                 robot.setUpDownPercentageTo(position);
+                robot.waitUntilInitIsFinished();
                 break;
             case "backforth":
                 robot.setBackForthPercentageTo(position);
+                robot.waitUntilInitIsFinished();
                 break;
-            case "openGrip":
+            case "opengrip":
             	robot.setOpenClosePercentageTo(100);
+                robot.waitUntilInitIsFinished();
             	break;
-            case "closeGrip":
+            case "closegrip":
             	robot.setOpenClosePercentageTo(0);
+                robot.waitUntilInitIsFinished();
             	break;
             default:
                 System.out.printf("[Warnung] Ungültige Richtung: %s\n", direction);
