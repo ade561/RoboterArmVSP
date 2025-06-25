@@ -1,6 +1,8 @@
 package cads.roboticArm.simulation;
 
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
+
+import java.awt.Robot;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.DatagramPacket;
@@ -12,6 +14,7 @@ public class ServerStub {
     private static int position = 50;
     
     private ResponseSender responseSender;
+    private ICaDSRoboticArm robot;
     private int srcPort;
     private int dstPort;
     private int seqNumber;
@@ -19,10 +22,11 @@ public class ServerStub {
     private String dstIp;
     private DatagramSocket socket;
     
-    public ServerStub(String srcIp, int srcPort, DatagramSocket socket) {
+    public ServerStub(String srcIp, int srcPort, DatagramSocket socket,ICaDSRoboticArm robot) {
         this.srcIp = srcIp;
         this.srcPort = srcPort;
-        this.socket = socket; 
+        this.socket = socket;
+        this.robot = robot;
         this.responseSender = new ResponseSender(this.socket); 
     }
     
@@ -46,23 +50,18 @@ public class ServerStub {
         switch (direction.toLowerCase()) {
             case "leftright":
                 robot.setLeftRightPercentageTo(position);
-                robot.waitUntilInitIsFinished();
                 break;
             case "updown":
                 robot.setUpDownPercentageTo(position);
-                robot.waitUntilInitIsFinished();
                 break;
             case "backforth":
                 robot.setBackForthPercentageTo(position);
-                robot.waitUntilInitIsFinished();
                 break;
             case "opengrip":
             	robot.setOpenClosePercentageTo(100);
-                robot.waitUntilInitIsFinished();
             	break;
             case "closegrip":
             	robot.setOpenClosePercentageTo(0);
-                robot.waitUntilInitIsFinished();
             	break;
             default:
                 System.out.printf("[Warnung] Ungültige Richtung: %s\n", direction);
@@ -102,7 +101,7 @@ public class ServerStub {
         }
     }
 
-    public void unmarshallingMessage(byte[] raw, int len, ICaDSRoboticArm robot) {
+    public void unmarshallingMessage(byte[] raw, int len) {
         // Überprüfe, ob die Nachricht die erwartete Länge hat
         if (len != 24) {
             System.out.printf("[Warnung] Ungültige Nachrichtenlänge: %d (erwartet: 24)\n", len);
@@ -156,7 +155,7 @@ public class ServerStub {
         setSeqNumber(seqNumber);
         
         // Führe den Befehl aus
-        dispatchCommand(functionId, robot);
+        dispatchCommand(functionId, getICaDSRoboticArm());
         responseSender.sendResponse(getDstIp(), getDstPort(), getSrcIp(), getSrcPort(), functionId, getSeqNumber());
     }
 
@@ -169,9 +168,9 @@ public class ServerStub {
         return checksum;
     }
     
-    
+    //TODO sollte noch gemacht werden bzw verbessert
     public void sendHeartbeat() {
-	    responseSender.sendResponse(getDstIp(), getDstPort(), getSrcIp(), getSrcPort(), 13, getSeqNumber());
+    	responseSender.sendResponse(getDstIp(), getDstPort(), getSrcIp(), getSrcPort(), 13, getSeqNumber());
     }
 
 
@@ -181,6 +180,7 @@ public class ServerStub {
         public int getSrcPort() { return srcPort; }
         public int getDstPort() { return dstPort; }
         public int getSeqNumber() { return seqNumber; }
+        public ICaDSRoboticArm getICaDSRoboticArm() {return robot;}
 
         // ✅ Setter
         public void setSrcIp(String srcIp) { this.srcIp = srcIp; }
