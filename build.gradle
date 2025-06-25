@@ -1,0 +1,41 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.14'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['VSEclipseExampleProject/robotic_arm_api_examples']
+        }
+    }
+}
+
+application {
+    mainClass = 'cads.roboticArm.simulation.Server'
+}
+
+javafx {
+    version = '17.0.15'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+dependencies {
+    // JavaFX
+    implementation 'org.openjfx:javafx-controls:17.0.15'
+    implementation 'org.openjfx:javafx-fxml:17.0.15'
+
+    // Deine .jar Dateien einbinden
+    implementation files('VSEclipseExampleProject/resources/libs/CaDSControlGUI.jar')
+    implementation files('VSEclipseExampleProject/resources/libs/CaDSLogger.jar')
+    implementation files('VSEclipseExampleProject/resources/libs/CaDSRoboticArmInterface.jar')
+
+    // Sonstige Abhängigkeiten
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+    implementation 'org.slf4j:slf4j-simple:2.0.7'
+    implementation 'com.google.code.gson:gson:2.10.1'
+}

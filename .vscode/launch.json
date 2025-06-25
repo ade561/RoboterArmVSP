@@ -1,0 +1,91 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "TestCaDSRoboticArmControlGUI",
+            "request": "launch",
+            "mainClass": "cads.control.gui.TestCaDSRoboticArmControlGUI",
+            "projectName": "CaDSPracticalExamVSPart1 (2)"
+        },
+        {
+            "type": "java",
+            "name": "Example1",
+            "request": "launch",
+            "mainClass": "cads.parser.examples.Example1",
+            "projectName": "CaDSPracticalExamVSPart1 (2)"
+        },
+        {
+            "type": "java",
+            "name": "Example2",
+            "request": "launch",
+            "mainClass": "cads.parser.examples.Example2",
+            "projectName": "CaDSPracticalExamVSPart1 (2)"
+        },
+        {
+            "type": "java",
+            "name": "Example3",
+            "request": "launch",
+            "mainClass": "cads.parser.examples.Example3",
+            "projectName": "CaDSPracticalExamVSPart1 (2)"
+        },
+        {
+            "type": "java",
+            "name": "Example4",
+            "request": "launch",
+            "mainClass": "cads.parser.examples.Example4",
+            "projectName": "CaDSPracticalExamVSPart1 (2)"
+        },
+        {
+            "type": "java",
+            "name": "TestCaDSRoboticArmReal",
+            "request": "launch",
+            "mainClass": "cads.roboticArm.real.TestCaDSRoboticArmReal",
+            "projectName": "CaDSPracticalExamVSPart1 (2)"
+        },
+        {
+            "type": "java",
+            "name": "TestCaDSRoboticArmSimulation",
+            "request": "launch",
+            "mainClass": "cads.roboticArm.simulation.TestCaDSRoboticArmSimulation",
+            "projectName": "CaDSPracticalExamVSPart1 (2)"
+        },
+        {
+            "type": "java",
+            "name": "TestCaDSRoboticArmSimulationStartAndTeardown",
+            "request": "launch",
+            "mainClass": "cads.roboticArm.simulation.TestCaDSRoboticArmSimulationStartAndTeardown",
+            "projectName": "CaDSPracticalExamVSPart1 (2)"
+        },
+        {
+            "type": "java",
+            "name": "TestCaDSRoboticArmSimulationPhilosophersOwnPlaces",
+            "request": "launch",
+            "mainClass": "cads.roboticArm.simulation.philosophers.TestCaDSRoboticArmSimulationPhilosophersOwnPlaces",
+            "projectName": "CaDSPracticalExamVSPart1 (2)"
+        },
+        {
+            "type": "java",
+            "name": "TestCaDSRoboticArmSimulationPhilosophersOwnPlacesAndOthers",
+            "request": "launch",
+            "mainClass": "cads.roboticArm.simulation.philosophers.TestCaDSRoboticArmSimulationPhilosophersOwnPlacesAndOthers",
+            "projectName": "CaDSPracticalExamVSPart1 (2)"
+        },
+        {
+            "type": "java",
+            "name": "Gradle: Run RoboterArm",
+            "request": "launch",
+            "mainClass": "",
+            "preLaunchTask": "run-roboterarm"
+        }
+    ]
+}

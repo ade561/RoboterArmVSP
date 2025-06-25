@@ -19,7 +19,7 @@ import java.io.InputStreamReader;
 
 public class Server {
     private static final int BUFFER_SIZE = 1024;
-    private static final String IP_ADDRESS = "172.16.1.11";
+    private static final String IP_ADDRESS = "192.168.178.48";
     private static final int PORT = 8080;
     private static ICaDSRoboticArm simulation;
     
@@ -27,7 +27,8 @@ public class Server {
     public static void main(String[] args) {
         try {
         	//Roboter erstellen
-            simulation = new CaDSRoboticArmReal("172.16.1.64", 50055);
+            simulation = new CaDSRoboticArmSimulation();
+            //simulation = new CaDSRoboticArmReal("172.16.1.64", 50055);
             simulation.init();
             simulation.waitUntilInitIsFinished();
             simulation.setBackForthPercentageTo(50);
