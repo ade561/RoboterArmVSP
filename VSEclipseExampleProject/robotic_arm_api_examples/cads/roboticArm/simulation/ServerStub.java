@@ -1,5 +1,6 @@
 package cads.roboticArm.simulation;
 
+import cads.roboticArm.simulation.Interfaces.IServerStub;
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
 import java.awt.Robot;
@@ -10,7 +11,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.Socket;
 
-public class ServerStub {
+public class ServerStub implements IServerStub {
     private static int position = 50;
     
     private ResponseSender responseSender;
@@ -41,8 +42,7 @@ public class ServerStub {
     	return position += (increase ? 2 : -2);
     }
     
-
-
+    //TODO die aufrufe sollten lieber von einer Actuator Klasse aufgerufen werden statt direkt vom Roboter
     public static void move(ICaDSRoboticArm robot, String direction, boolean increase) {
     	if((!direction.equals("openGrip")) || (!direction.equals("closeGrip"))) {
     		position = changePosition(increase);
@@ -69,6 +69,7 @@ public class ServerStub {
         }
     }
 
+    //TODO lieber in einer Dispatcher klasse
     private static void dispatchCommand(int functionId, ICaDSRoboticArm robot) {
         switch (functionId) {
             case 1:
@@ -138,7 +139,7 @@ public class ServerStub {
                         (raw[19] & 0xFF);
 
         // Überprüfe die Checksumme
-        int checksumCalculated = calculateChecksum(raw, len - 4); // Die letzten 4 Bytes sind die Checksumme
+        int checksumCalculated = IServerStub.calculateChecksum(raw, len - 4); // Die letzten 4 Bytes sind die Checksumme
         int checksumReceived = ((raw[len - 4] & 0xFF) << 24) |
                                ((raw[len - 3] & 0xFF) << 16) |
                                ((raw[len - 2] & 0xFF) << 8) |
@@ -156,19 +157,8 @@ public class ServerStub {
         
         // Führe den Befehl aus
         dispatchCommand(functionId, getICaDSRoboticArm());
-        responseSender.sendResponse(getDstIp(), getDstPort(), getSrcIp(), getSrcPort(), functionId, getSeqNumber());
-    }
-
-    // Berechne die Checksumme, die mit der Nachricht übertragen wurde (exklusive Checksumme selbst)
-    private static int calculateChecksum(byte[] raw, int len) {
-        int checksum = 0;
-        for (int i = 0; i < len; i++) {
-            checksum += (raw[i] & 0xFF);
-        }
-        return checksum;
     }
     
-    //TODO sollte noch gemacht werden bzw verbessert
     public void sendHeartbeat() {
     	responseSender.sendResponse(getDstIp(), getDstPort(), getSrcIp(), getSrcPort(), 13, getSeqNumber());
     }
@@ -182,7 +172,6 @@ public class ServerStub {
         public int getSeqNumber() { return seqNumber; }
         public ICaDSRoboticArm getICaDSRoboticArm() {return robot;}
 
-        // ✅ Setter
         public void setSrcIp(String srcIp) { this.srcIp = srcIp; }
         public void setDstIp(String dstIp) { this.dstIp = dstIp; }
         public void setSrcPort(int srcPort) { this.srcPort = srcPort; }

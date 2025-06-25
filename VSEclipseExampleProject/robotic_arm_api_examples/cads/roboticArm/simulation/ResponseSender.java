@@ -64,8 +64,6 @@ public class ResponseSender {
 
             socket.send(packet);
 
-            //System.out.printf("[info] Antwort gesendet an %s:%d (Funktion: %d, Seq: %d)\n", dstIP, dstPort, functionId, seqNumber);
-
         } catch (Exception e) {
             System.err.println("[Fehler beim Senden der Antwort]");
             e.printStackTrace();
