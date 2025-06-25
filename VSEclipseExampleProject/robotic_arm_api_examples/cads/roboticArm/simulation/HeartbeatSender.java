@@ -1,11 +1,15 @@
 package cads.roboticArm.simulation;
 
+import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
+
 public class HeartbeatSender extends Thread {
     private final ServerStub serverStub;
+    private final ICaDSRoboticArm robot;
     private volatile boolean running = true;
 
-    public HeartbeatSender(ServerStub serverStub) {
+    public HeartbeatSender(ServerStub serverStub,ICaDSRoboticArm robot) {
         this.serverStub = serverStub;
+        this.robot = robot;
     }
 
     @Override
@@ -13,14 +17,13 @@ public class HeartbeatSender extends Thread {
         while (running) {
             try {
                 // Warte, bis eine gültige Zieladresse da ist
-                if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0) {
+                if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0 && robot.heartbeat() == true) {
                     serverStub.sendHeartbeat();
-                    //System.out.println("[Heartbeat] gesendet an " + serverStub.getDstIp() + ":" + serverStub.getDstPort());
                 } else {
-                    //System.out.println("[Heartbeat] Kein Client verbunden. Warte...");
+                    System.out.println("[Heartbeat] Kein Client verbunden. Warte...");
                 }
                 
-                Thread.sleep(500); // Warte 2 Sekunden
+                Thread.sleep(250); // Warte 2 Sekunden
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;

@@ -15,7 +15,7 @@ public class TestCaDSRoboticArmReal {
     public static void main(String[] args) {
         try {
         	// TODO Enter the correct Address and Port to access the right robot
-            real = new CaDSRoboticArmReal("127.0.0.1", 50051);
+            real = new CaDSRoboticArmReal("172.16.1.64", 50055);
 
             TimeUnit.SECONDS.sleep(3);
             System.out.printf("Simulation Started\n");
