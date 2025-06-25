@@ -23,7 +23,7 @@ public class HeartbeatSender extends Thread {
                     System.out.println("[Heartbeat] Kein Client verbunden. Warte...");
                 }
                 
-                Thread.sleep(500); // Warte 2 Sekunden
+                Thread.sleep(250); // Warte 2 Sekunden
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
