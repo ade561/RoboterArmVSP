@@ -10,7 +10,7 @@ import org.cads.vs.roboticArm.hal.simulation.CaDSRoboticArmSimulation;
 
 public class Server {
     private static final int BUFFER_SIZE = 1024;
-    private static final String IP_ADDRESS = "192.168.178.48";
+    private static final String IP_ADDRESS = "141.22.73.253";
     private static final int PORT = 8080;
     private static ICaDSRoboticArm roboticArm;
     

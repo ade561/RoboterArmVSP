@@ -17,25 +17,62 @@ sourceSets {
 
 application {
     mainClass = 'cads.roboticArm.simulation.Server'
+    // JVM-Argumente für bessere 3D-Unterstützung
+    applicationDefaultJvmArgs = [
+            '-Dprism.verbose=true',
+            '-Dprism.debug=true',
+            '-Dprism.forceGPU=true',
+            '-Dprism.order=es2,sw',  // d3d entfernt für Linux
+            '-Djavafx.animation.fullspeed=true',
+            '-XX:+UseG1GC',
+            '-XX:+UseStringDeduplication'
+    ]
 }
 
 javafx {
     version = '17.0.15'
-    modules = [ 'javafx.controls', 'javafx.fxml' ]
+    // 3D-Module hinzufügen
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics' ]
 }
 
+def osName = org.gradle.internal.os.OperatingSystem.current()
+
 dependencies {
-    // JavaFX
     implementation 'org.openjfx:javafx-controls:17.0.15'
     implementation 'org.openjfx:javafx-fxml:17.0.15'
+    implementation 'org.openjfx:javafx-graphics:17.0.15'
 
-    // Deine .jar Dateien einbinden
+    if (osName.isWindows()) {
+        runtimeOnly 'org.openjfx:javafx-graphics:17.0.15:win'
+    } else if (osName.isLinux()) {
+        runtimeOnly 'org.openjfx:javafx-graphics:17.0.15:linux'
+    } else if (osName.isMacOsX()) {
+        runtimeOnly 'org.openjfx:javafx-graphics:17.0.15:mac'
+    }
+
     implementation files('VSEclipseExampleProject/resources/libs/CaDSControlGUI.jar')
     implementation files('VSEclipseExampleProject/resources/libs/CaDSLogger.jar')
     implementation files('VSEclipseExampleProject/resources/libs/CaDSRoboticArmInterface.jar')
 
-    // Sonstige Abhängigkeiten
     implementation 'org.slf4j:slf4j-api:2.0.7'
     implementation 'org.slf4j:slf4j-simple:2.0.7'
     implementation 'com.google.code.gson:gson:2.10.1'
+}
+
+
+// Task für erweiterte Debugging-Informationen
+tasks.register('runDebug', JavaExec) {
+    group = 'application'
+    description = 'Run with extended 3D debugging'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = application.mainClass
+    jvmArgs = [
+            '-Dprism.verbose=true',
+            '-Dprism.debug=true',
+            '-Dprism.info=true',
+            '-Dprism.showdirty=true',
+            '-Dprism.printrendergraph=true',
+            '-Dquantum.verbose=true',
+            '-Djavafx.animation.fullspeed=true'
+    ]
 }
