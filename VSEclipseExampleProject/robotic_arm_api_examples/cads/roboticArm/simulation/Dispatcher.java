@@ -1,46 +1,33 @@
 package cads.roboticArm.simulation;
 
+import cads.roboticArm.simulation.Constants.Constants;
 import cads.roboticArm.simulation.Interfaces.IDispatcher;
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
 public class Dispatcher implements IDispatcher {
+    private boolean heartbeatAck = false;
+
+    public Dispatcher(){
+    }
 
     @Override
-    public void dispatchCommand(int functionId, ICaDSRoboticArm robot) {
+    public void dispatchCommand(int functionId, RobotArmActuator robotArmActuator) {
         switch (functionId) {
-            case 1:
-                move(robot, "leftright", true);
-                break;
-            case 2:
-                move(robot, "leftright", false);
-                break;
-            case 3:
-                move(robot, "updown", true);
-                break;
-            case 4:
-                move(robot, "updown", false);
-                break;
-            case 5:
-                move(robot, "backforth", true);
-                break;
-            case 6:
-                move(robot, "backforth", false);
-                break;
-            case 7:
-                move(robot, "openGrip", true);
-                break;
-            case 8:
-                move(robot, "closeGrip", false);
-                break;
-            default:
-                System.out.printf("[Unbekannte Funktion] ID = %d\n", functionId);
-                break;
+            case Constants.MOVE_RIGHT -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "leftright", true);
+            case Constants.MOVE_LEFT -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "leftright", false);
+            case Constants.MOVE_UP -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "updown", true);
+            case Constants.MOVE_DOWN -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "updown", false);
+            case Constants.MOVE_FORWARD -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "backforth", true);
+            case Constants.MOVE_BACKWARDS -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "backforth", false);
+            case Constants.OPEN_GRIP -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "openGrip", true);
+            case Constants.CLOSE_GRIP -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "closeGrip", false);
+            case Constants.ACK -> setHeartbeatAck(true);
+            default -> System.out.printf("[Unbekannte Funktion] ID = %d\n", functionId);
         }
     }
 
-    // IST NUR EIN TEMPORÄR DIE RICHTIGE MOVE IST DANN IN ACTUATOR
-    private void move(ICaDSRoboticArm robot, String direction, boolean positive) {
-        // Hier kommt deine Steuerlogik rein
-        System.out.printf("Bewege %s in Richtung %s\n", direction, positive ? "positiv" : "negativ");
+    public void setHeartbeatAck(boolean v){
+        heartbeatAck = v;
     }
+    public boolean getHeartbeatAck(){return heartbeatAck; }
 }

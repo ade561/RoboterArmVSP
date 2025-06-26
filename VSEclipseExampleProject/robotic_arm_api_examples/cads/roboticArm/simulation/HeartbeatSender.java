@@ -1,5 +1,6 @@
 package cads.roboticArm.simulation;
 
+import cads.roboticArm.simulation.Constants.Constants;
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
 public class HeartbeatSender extends Thread {
@@ -17,13 +18,14 @@ public class HeartbeatSender extends Thread {
         while (running) {
             try {
                 // Warte, bis eine gültige Zieladresse da ist
-                if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0 && robot.heartbeat() == true) {
+                if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0 && robot.heartbeat()) {
                     serverStub.sendHeartbeat();
-                } else {
+                } else if (!robot.heartbeat()) {
+                    robot.teardown();
                     System.out.println("[Heartbeat] Kein Client verbunden. Warte...");
                 }
                 
-                Thread.sleep(250); // Warte 2 Sekunden
+                Thread.sleep(Constants.MAX_WAIT_TIMER); // Warte 2 Sekunden
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
@@ -31,11 +33,6 @@ public class HeartbeatSender extends Thread {
                 System.err.println("[Heartbeat Fehler] " + e.getMessage());
             }
         }
-    }
-
-    public void stopHeartbeat() {
-        running = false;
-        this.interrupt();
     }
 }
 
