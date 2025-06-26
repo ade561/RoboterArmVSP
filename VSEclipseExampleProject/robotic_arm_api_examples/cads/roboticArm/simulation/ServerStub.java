@@ -15,7 +15,8 @@ public class ServerStub implements IServerStub {
     private static int position = 50;
     
     private ResponseSender responseSender;
-    private ICaDSRoboticArm robot;
+    private RobotArmActuator robotArmActuator;
+    private Dispatcher dispatcher;
     private int srcPort;
     private int dstPort;
     private int seqNumber;
@@ -23,83 +24,13 @@ public class ServerStub implements IServerStub {
     private String dstIp;
     private DatagramSocket socket;
     
-    public ServerStub(String srcIp, int srcPort, DatagramSocket socket,ICaDSRoboticArm robot) {
+    public ServerStub(String srcIp, int srcPort, DatagramSocket socket,RobotArmActuator robotArmActuator, Dispatcher dispatcher) {
         this.srcIp = srcIp;
         this.srcPort = srcPort;
         this.socket = socket;
-        this.robot = robot;
+        this.robotArmActuator = robotArmActuator;
+        this.dispatcher = dispatcher;
         this.responseSender = new ResponseSender(this.socket); 
-    }
-    
-    
-  
-    private static int changePosition(boolean increase) {
-    	if(increase == true && (position + 2) > 100) {
-    		return position = 100;
-    	}else if(increase != true && (position - 2) < 0) {
-    		return position = 0;
-    	}
-    	return position += (increase ? 2 : -2);
-    }
-    
-    //TODO die aufrufe sollten lieber von einer Actuator Klasse aufgerufen werden statt direkt vom Roboter
-    public static void move(ICaDSRoboticArm robot, String direction, boolean increase) {
-    	if((!direction.equals("openGrip")) || (!direction.equals("closeGrip"))) {
-    		position = changePosition(increase);
-    	}
-        switch (direction.toLowerCase()) {
-            case "leftright":
-                robot.setLeftRightPercentageTo(position);
-                break;
-            case "updown":
-                robot.setUpDownPercentageTo(position);
-                break;
-            case "backforth":
-                robot.setBackForthPercentageTo(position);
-                break;
-            case "opengrip":
-            	robot.setOpenClosePercentageTo(100);
-            	break;
-            case "closegrip":
-            	robot.setOpenClosePercentageTo(0);
-            	break;
-            default:
-                System.out.printf("[Warnung] Ungültige Richtung: %s\n", direction);
-                break;
-        }
-    }
-
-    //TODO lieber in einer Dispatcher klasse
-    private static void dispatchCommand(int functionId, ICaDSRoboticArm robot) {
-        switch (functionId) {
-            case 1:
-                move(robot, "leftright", true);
-                break;
-            case 2:
-                move(robot, "leftright", false);
-                break;
-            case 3:
-                move(robot, "updown", true);
-                break;
-            case 4:
-                move(robot, "updown", false);
-                break;
-            case 5:
-                move(robot, "backforth", true);
-                break;
-            case 6:
-                move(robot, "backforth", false);
-                break;
-            case 7:
-            	move(robot,"openGrip",true);
-            	break;
-            case 8:
-            	move(robot,"closeGrip",false);
-            	break;
-            default:
-                System.out.printf("[Unbekannte Funktion] ID = %d\n", functionId);
-                break;
-        }
     }
 
     public void unmarshallingMessage(byte[] raw, int len) {
@@ -156,21 +87,18 @@ public class ServerStub implements IServerStub {
         setSeqNumber(seqNumber);
         
         // Führe den Befehl aus
-        dispatchCommand(functionId, getICaDSRoboticArm());
+        dispatcher.dispatchCommand(functionId, robotArmActuator);
     }
     
     public void sendHeartbeat() {
     	responseSender.sendResponse(getDstIp(), getDstPort(), getSrcIp(), getSrcPort(), 13, getSeqNumber());
     }
-
-
                 
         public String getSrcIp() { return srcIp; }
         public String getDstIp() { return dstIp; }
         public int getSrcPort() { return srcPort; }
         public int getDstPort() { return dstPort; }
         public int getSeqNumber() { return seqNumber; }
-        public ICaDSRoboticArm getICaDSRoboticArm() {return robot;}
 
         public void setSrcIp(String srcIp) { this.srcIp = srcIp; }
         public void setDstIp(String dstIp) { this.dstIp = dstIp; }

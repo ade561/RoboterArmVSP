@@ -17,9 +17,10 @@ public class HeartbeatSender extends Thread {
         while (running) {
             try {
                 // Warte, bis eine gültige Zieladresse da ist
-                if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0 && robot.heartbeat() == true) {
+                if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0 && robot.heartbeat()) {
                     serverStub.sendHeartbeat();
-                } else {
+                } else if (!robot.heartbeat()) {
+                    robot.teardown();
                     System.out.println("[Heartbeat] Kein Client verbunden. Warte...");
                 }
                 
@@ -31,11 +32,6 @@ public class HeartbeatSender extends Thread {
                 System.err.println("[Heartbeat Fehler] " + e.getMessage());
             }
         }
-    }
-
-    public void stopHeartbeat() {
-        running = false;
-        this.interrupt();
     }
 }
 
