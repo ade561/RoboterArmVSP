@@ -17,13 +17,15 @@ public class Server {
     private static RobotArmActuator robotArmActuator;
     private static RobotArmSensor robotArmSensor;
     private static Dispatcher dispatcher;
+    private static HeartbeatReceiver heartbeatReceiver;
+    private static HeartbeatSender heartbeatSender;
     
     
     public static void main(String[] args) {
         try {
         	//Roboter erstellen
-            //roboticArm = new CaDSRoboticArmSimulation();
-            roboticArm = new CaDSRoboticArmReal("172.16.1.64", 50055);
+            roboticArm = new CaDSRoboticArmSimulation();
+            //roboticArm = new CaDSRoboticArmReal("172.16.1.64", 50055);
             robotArmSensor = new RobotArmSensor(roboticArm);
             robotArmActuator = new RobotArmActuator(roboticArm,robotArmSensor);
             dispatcher = new Dispatcher();
@@ -34,11 +36,14 @@ public class Server {
             DatagramSocket socket = new DatagramSocket(Constants.PORT, InetAddress.getByName(Constants.IP_ADDRESS));
             ServerStub stub = new ServerStub(Constants.IP_ADDRESS, Constants.PORT, socket, robotArmActuator,dispatcher);
 
-            HeartbeatSender heartbeatSender = new HeartbeatSender(stub, roboticArm);
-            
+            heartbeatSender = new HeartbeatSender(stub, roboticArm,dispatcher);
+            heartbeatReceiver = new HeartbeatReceiver(stub,roboticArm,dispatcher);
+            dispatcher.setHeartbeatReceiver(heartbeatReceiver);
+
             System.out.printf("UDP Server running on Port %d and address %s...\n", Constants.PORT, Constants.IP_ADDRESS);
 
             heartbeatSender.start();
+            heartbeatReceiver.startChecking();
             // Nachrichtenverarbeitung
             while (true) {
                 byte[] buffer = new byte[Constants.BUFFER_SIZE];

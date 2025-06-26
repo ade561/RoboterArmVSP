@@ -14,19 +14,22 @@ sourceSets {
         }
     }
 }
-
+def osName = org.gradle.internal.os.OperatingSystem.current()
 application {
     mainClass = 'cads.roboticArm.simulation.Server'
-    // JVM-Argumente für bessere 3D-Unterstützung
     applicationDefaultJvmArgs = [
             '-Dprism.verbose=true',
             '-Dprism.debug=true',
             '-Dprism.forceGPU=true',
-            '-Dprism.order=es2,sw',  // d3d entfernt für Linux
             '-Djavafx.animation.fullspeed=true',
             '-XX:+UseG1GC',
             '-XX:+UseStringDeduplication'
     ]
+    if (osName.isWindows()) {
+        applicationDefaultJvmArgs += ['-Dprism.order=d3d,es2,sw']
+    } else {
+        applicationDefaultJvmArgs += ['-Dprism.order=es2,sw']
+    }
 }
 
 javafx {
@@ -35,7 +38,7 @@ javafx {
     modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics' ]
 }
 
-def osName = org.gradle.internal.os.OperatingSystem.current()
+
 
 dependencies {
     implementation 'org.openjfx:javafx-controls:17.0.15'

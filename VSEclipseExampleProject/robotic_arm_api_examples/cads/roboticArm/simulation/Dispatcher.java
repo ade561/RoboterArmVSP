@@ -6,6 +6,9 @@ import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
 public class Dispatcher implements IDispatcher {
     private boolean heartbeatAck = false;
+    private HeartbeatReceiver heartbeatReceiver;
+
+
 
     public Dispatcher(){
     }
@@ -21,7 +24,12 @@ public class Dispatcher implements IDispatcher {
             case Constants.MOVE_BACKWARDS -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "backforth", false);
             case Constants.OPEN_GRIP -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "openGrip", true);
             case Constants.CLOSE_GRIP -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "closeGrip", false);
-            case Constants.ACK -> setHeartbeatAck(true);
+            case Constants.ACK -> {
+                setHeartbeatAck(true);
+                if(heartbeatReceiver != null) {
+                    heartbeatReceiver.updateHeartbeatTimestamp();
+                }
+            }
             default -> System.out.printf("[Unbekannte Funktion] ID = %d\n", functionId);
         }
     }
@@ -30,4 +38,7 @@ public class Dispatcher implements IDispatcher {
         heartbeatAck = v;
     }
     public boolean getHeartbeatAck(){return heartbeatAck; }
+    public void setHeartbeatReceiver(HeartbeatReceiver heartbeatReceiver) {
+        this.heartbeatReceiver = heartbeatReceiver;
+    }
 }

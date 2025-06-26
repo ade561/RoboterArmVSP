@@ -114,7 +114,7 @@ case "$( uname )" in                #(
   NONSTOP* )        nonstop=true ;;
 esac
 
-CLASSPATH=$APP_HOME/lib/RoboterArmVSP.jar:$APP_HOME/lib/CaDSControlGUI.jar:$APP_HOME/lib/CaDSLogger.jar:$APP_HOME/lib/CaDSRoboticArmInterface.jar:$APP_HOME/lib/javafx-fxml-17.0.15-linux.jar:$APP_HOME/lib/javafx-fxml-17.0.15.jar:$APP_HOME/lib/javafx-controls-17.0.15-linux.jar:$APP_HOME/lib/javafx-controls-17.0.15.jar:$APP_HOME/lib/javafx-graphics-17.0.15-linux.jar:$APP_HOME/lib/javafx-graphics-17.0.15.jar:$APP_HOME/lib/javafx-base-17.0.15-linux.jar:$APP_HOME/lib/javafx-base-17.0.15.jar:$APP_HOME/lib/slf4j-simple-2.0.7.jar:$APP_HOME/lib/slf4j-api-2.0.7.jar:$APP_HOME/lib/gson-2.10.1.jar
+CLASSPATH=$APP_HOME/lib/RoboterArmVSP.jar:$APP_HOME/lib/CaDSControlGUI.jar:$APP_HOME/lib/CaDSLogger.jar:$APP_HOME/lib/CaDSRoboticArmInterface.jar:$APP_HOME/lib/javafx-fxml-17.0.15-win.jar:$APP_HOME/lib/javafx-fxml-17.0.15.jar:$APP_HOME/lib/javafx-controls-17.0.15-win.jar:$APP_HOME/lib/javafx-controls-17.0.15.jar:$APP_HOME/lib/javafx-graphics-17.0.15-win.jar:$APP_HOME/lib/javafx-graphics-17.0.15.jar:$APP_HOME/lib/javafx-base-17.0.15-win.jar:$APP_HOME/lib/javafx-base-17.0.15.jar:$APP_HOME/lib/slf4j-simple-2.0.7.jar:$APP_HOME/lib/slf4j-api-2.0.7.jar:$APP_HOME/lib/gson-2.10.1.jar
 
 
 # Determine the Java command to use to start the JVM.
@@ -202,7 +202,7 @@ fi
 
 
 # Add default JVM options here. You can also use JAVA_OPTS and ROBOTER_ARM_VSP_OPTS to pass JVM options to this script.
-DEFAULT_JVM_OPTS='"-Dprism.verbose=true" "-Dprism.debug=true" "-Dprism.forceGPU=true" "-Dprism.order=es2,sw" "-Djavafx.animation.fullspeed=true" "-XX:+UseG1GC" "-XX:+UseStringDeduplication"'
+DEFAULT_JVM_OPTS='"-Dprism.verbose=true" "-Dprism.debug=true" "-Dprism.forceGPU=true" "-Djavafx.animation.fullspeed=true" "-XX:+UseG1GC" "-XX:+UseStringDeduplication" "-Dprism.order=d3d,es2,sw"'
 
 # Collect all arguments for the java command:
 #   * DEFAULT_JVM_OPTS, JAVA_OPTS, and optsEnvironmentVar are not allowed to contain shell fragments,

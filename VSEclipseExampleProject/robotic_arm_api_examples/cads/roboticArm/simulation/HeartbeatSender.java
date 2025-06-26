@@ -7,10 +7,12 @@ public class HeartbeatSender extends Thread {
     private final ServerStub serverStub;
     private final ICaDSRoboticArm robot;
     private volatile boolean running = true;
+    private final Dispatcher dispatcher;
 
-    public HeartbeatSender(ServerStub serverStub,ICaDSRoboticArm robot) {
+    public HeartbeatSender(ServerStub serverStub,ICaDSRoboticArm robot,Dispatcher dispatcher) {
         this.serverStub = serverStub;
         this.robot = robot;
+        this.dispatcher = dispatcher;
     }
 
     @Override
@@ -20,6 +22,8 @@ public class HeartbeatSender extends Thread {
                 // Warte, bis eine gültige Zieladresse da ist
                 if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0 && robot.heartbeat()) {
                     serverStub.sendHeartbeat();
+                    //System.out.println("Server heartbeat sent to " + serverStub.getDstPort());
+                    dispatcher.setHeartbeatAck(false);
                 } else if (!robot.heartbeat()) {
                     robot.teardown();
                     System.out.println("[Heartbeat] Kein Client verbunden. Warte...");

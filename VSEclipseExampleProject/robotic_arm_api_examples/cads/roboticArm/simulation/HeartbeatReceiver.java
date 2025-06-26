@@ -5,34 +5,46 @@ import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
 import java.sql.Timestamp;
 
-//TODO Diese Klasse soll auf die Received ACK vom ITS-BRDs reagieren
-public class HeartbeatReceiver extends Thread {
 
-    private final Timestamp timestamp;
+import cads.roboticArm.simulation.Constants.Constants;
+import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
+
+public class HeartbeatReceiver {
+
     private final ServerStub serverStub;
     private final ICaDSRoboticArm robot;
     private final Dispatcher dispatcher;
-    private volatile boolean running = true;
+    private final OneShotTimer timer;
+
+    private volatile long lastHeartbeatTime;
 
     public HeartbeatReceiver(ServerStub serverStub, ICaDSRoboticArm robot, Dispatcher dispatcher) {
-        this.dispatcher = dispatcher;
-        this.timestamp = new Timestamp(0);
         this.serverStub = serverStub;
         this.robot = robot;
+        this.dispatcher = dispatcher;
+        this.lastHeartbeatTime = System.currentTimeMillis();
+        this.timer = new OneShotTimer(Constants.MAX_WAIT_TIMER);
     }
 
-    @Override
-    public void run() {
-        while (running) {
+    public void startChecking() {
+        timer.start(() -> {
             try {
-                if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0 &&
-                        robot.heartbeat() && timestamp.getTime() > Constants.MAX_WAIT_TIMER && !dispatcher.getHeartbeatAck()) {
-
-                    robot.teardown();
+                if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0 && robot.heartbeat()) {
+                    long currentTime = System.currentTimeMillis();
+                    if (currentTime - lastHeartbeatTime > Constants.MAX_WAIT_TIMER && !dispatcher.getHeartbeatAck()) {
+                        System.out.println("[HeartbeatReceiver] Timeout - Keine ACK Nachricht empfangen.");
+                        robot.teardown();
+                        timer.stop(); // Timer optional stoppen
+                    }
                 }
             } catch (Exception e) {
-                System.err.println("[Heartbeat Receive Fehler] " + e.getMessage());
+                System.err.println("[HeartbeatReceiver Fehler] " + e.getMessage());
             }
-        }
+        });
+    }
+
+    public void updateHeartbeatTimestamp() {
+        lastHeartbeatTime = System.currentTimeMillis();
     }
 }
+

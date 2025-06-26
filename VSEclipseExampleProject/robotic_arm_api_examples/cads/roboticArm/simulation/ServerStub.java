@@ -1,5 +1,6 @@
 package cads.roboticArm.simulation;
 
+import cads.roboticArm.simulation.Constants.Constants;
 import cads.roboticArm.simulation.Interfaces.IServerStub;
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
@@ -14,7 +15,6 @@ import java.sql.Timestamp;
 
 public class ServerStub implements IServerStub {
 
-    private Timestamp timestamp;
     private ResponseSender responseSender;
     private RobotArmActuator robotArmActuator;
     private Dispatcher dispatcher;
@@ -32,7 +32,6 @@ public class ServerStub implements IServerStub {
         this.robotArmActuator = robotArmActuator;
         this.dispatcher = dispatcher;
         this.responseSender = new ResponseSender(this.socket);
-        this.timestamp = new Timestamp(0);
     }
 
     public void unmarshallingMessage(byte[] raw, int len) {
@@ -88,13 +87,12 @@ public class ServerStub implements IServerStub {
         setDstPort(srcPort);
         setSeqNumber(seqNumber);
 
-        System.out.println("TIMESTAMP: " + timestamp.toString());
         // Führe den Befehl aus
         dispatcher.dispatchCommand(functionId, robotArmActuator);
     }
     
     public void sendHeartbeat() {
-    	responseSender.sendResponse(getDstIp(), getDstPort(), getSrcIp(), getSrcPort(), 13, getSeqNumber());
+    	responseSender.sendResponse(getDstIp(), getDstPort(), getSrcIp(), getSrcPort(), Constants.HEARTBEAT, getSeqNumber());
     }
                 
         public String getSrcIp() { return srcIp; }

@@ -7,7 +7,7 @@ public final class Constants {
     public static final int DEFAULT_POS = 50;
     public static final int CHANGEPOS = 2;
     public static final int BUFFER_SIZE = 1024;
-    public static final String IP_ADDRESS = "172.16.1.8";
+    public static final String IP_ADDRESS = "192.168.178.48";
     public static final int PORT = 8080;
     public static final int MAX_POS = 100;
     public static final int MIN_POS = 0;
