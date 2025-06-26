@@ -26,7 +26,7 @@ public class Server {
             roboticArm = new CaDSRoboticArmReal("172.16.1.64", 50055);
             robotArmSensor = new RobotArmSensor(roboticArm);
             robotArmActuator = new RobotArmActuator(roboticArm,robotArmSensor);
-            dispatcher = new Dispatcher(robotArmActuator);
+            dispatcher = new Dispatcher();
 
             robotArmActuator.initRobotArm(roboticArm);
 

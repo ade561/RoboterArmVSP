@@ -5,42 +5,29 @@ import cads.roboticArm.simulation.Interfaces.IDispatcher;
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
 public class Dispatcher implements IDispatcher {
-    private RobotArmActuator robotArmActuator;
+    private boolean heartbeatAck = false;
 
-    public Dispatcher(RobotArmActuator robotArmActuator){
-        this.robotArmActuator = robotArmActuator;
+    public Dispatcher(){
     }
 
     @Override
     public void dispatchCommand(int functionId, RobotArmActuator robotArmActuator) {
         switch (functionId) {
-            case Constants.MOVE_RIGHT:
-                robotArmActuator.move(robotArmActuator.getRoboticArm(), "leftright", true);
-                break;
-            case Constants.MOVE_LEFT:
-                robotArmActuator.move(robotArmActuator.getRoboticArm(), "leftright", false);
-                break;
-            case Constants.MOVE_UP:
-                robotArmActuator.move(robotArmActuator.getRoboticArm(), "updown", true);
-                break;
-            case Constants.MOVE_DOWN:
-                robotArmActuator.move(robotArmActuator.getRoboticArm(), "updown", false);
-                break;
-            case Constants.MOVE_FORWARD:
-                robotArmActuator.move(robotArmActuator.getRoboticArm(), "backforth", true);
-                break;
-            case Constants.MOVE_BACKWARDS:
-                robotArmActuator.move(robotArmActuator.getRoboticArm(), "backforth", false);
-                break;
-            case Constants.OPEN_GRIP:
-                robotArmActuator.move(robotArmActuator.getRoboticArm(), "openGrip", true);
-                break;
-            case Constants.CLOSE_GRIP:
-                robotArmActuator.move(robotArmActuator.getRoboticArm(), "closeGrip", false);
-                break;
-            default:
-                System.out.printf("[Unbekannte Funktion] ID = %d\n", functionId);
-                break;
+            case Constants.MOVE_RIGHT -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "leftright", true);
+            case Constants.MOVE_LEFT -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "leftright", false);
+            case Constants.MOVE_UP -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "updown", true);
+            case Constants.MOVE_DOWN -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "updown", false);
+            case Constants.MOVE_FORWARD -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "backforth", true);
+            case Constants.MOVE_BACKWARDS -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "backforth", false);
+            case Constants.OPEN_GRIP -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "openGrip", true);
+            case Constants.CLOSE_GRIP -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "closeGrip", false);
+            case Constants.ACK -> setHeartbeatAck(true);
+            default -> System.out.printf("[Unbekannte Funktion] ID = %d\n", functionId);
         }
     }
+
+    public void setHeartbeatAck(boolean v){
+        heartbeatAck = v;
+    }
+    public boolean getHeartbeatAck(){return heartbeatAck; }
 }

@@ -10,10 +10,11 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.sql.Timestamp;
 
 public class ServerStub implements IServerStub {
-    private static int position = 50;
-    
+
+    private Timestamp timestamp;
     private ResponseSender responseSender;
     private RobotArmActuator robotArmActuator;
     private Dispatcher dispatcher;
@@ -30,7 +31,8 @@ public class ServerStub implements IServerStub {
         this.socket = socket;
         this.robotArmActuator = robotArmActuator;
         this.dispatcher = dispatcher;
-        this.responseSender = new ResponseSender(this.socket); 
+        this.responseSender = new ResponseSender(this.socket);
+        this.timestamp = new Timestamp(0);
     }
 
     public void unmarshallingMessage(byte[] raw, int len) {
@@ -85,7 +87,8 @@ public class ServerStub implements IServerStub {
         setDstIp(srcIP);
         setDstPort(srcPort);
         setSeqNumber(seqNumber);
-        
+
+        System.out.println("TIMESTAMP: " + timestamp.toString());
         // Führe den Befehl aus
         dispatcher.dispatchCommand(functionId, robotArmActuator);
     }
