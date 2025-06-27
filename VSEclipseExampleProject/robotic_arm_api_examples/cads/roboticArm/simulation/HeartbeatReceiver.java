@@ -15,6 +15,7 @@ public class HeartbeatReceiver {
     private final ICaDSRoboticArm robot;
     private final Dispatcher dispatcher;
     private final OneShotTimer timer;
+    private int ackCounter = 0;
 
     private volatile long lastHeartbeatTime;
 
@@ -26,15 +27,24 @@ public class HeartbeatReceiver {
         this.timer = new OneShotTimer(Constants.MAX_WAIT_TIMER);
     }
 
+
+
     public void startChecking() {
         timer.start(() -> {
             try {
                 if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0 && robot.heartbeat()) {
                     long currentTime = System.currentTimeMillis();
                     if (currentTime - lastHeartbeatTime > Constants.MAX_WAIT_TIMER && !dispatcher.getHeartbeatAck()) {
-                        System.out.println("[HeartbeatReceiver] Timeout - Keine ACK Nachricht empfangen.");
-                        robot.teardown();
-                        timer.stop(); // Timer optional stoppen
+                        increaseAckCounter();
+                        System.out.println("[HeartbeatReceiver] Timeout - Versuch: " + getAckCounter());
+
+                        if(getAckCounter() > Constants.KEEP_ALIVE_TRIES) {
+                            System.out.println("[HeartbeatReceiver] Verbindung Abgebrochen");
+                            robot.teardown();
+                            timer.stop(); // Timer optional stoppen
+                        }
+                    }else if(dispatcher.getHeartbeatAck()) {
+                        this.ackCounter = 0;
                     }
                 }
             } catch (Exception e) {
@@ -45,6 +55,14 @@ public class HeartbeatReceiver {
 
     public void updateHeartbeatTimestamp() {
         lastHeartbeatTime = System.currentTimeMillis();
+    }
+
+    public int getAckCounter() {
+        return this.ackCounter;
+    }
+
+    public void increaseAckCounter() {
+        this.ackCounter++;
     }
 }
 

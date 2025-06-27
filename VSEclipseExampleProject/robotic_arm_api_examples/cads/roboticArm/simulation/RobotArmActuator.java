@@ -43,8 +43,11 @@ public class RobotArmActuator implements IRobotArmActuator {
                 roboticArm.setBackForthPercentageTo(pos);
                 break;
             case "openclose":
-                pos = checkValidPos(increase,robotArmSensor.getOpenCloseGripPercentage());
-                roboticArm.setOpenClosePercentageTo(pos);
+                if(increase){
+                    roboticArm.setUpDownPercentageTo(Constants.MAX_POS);
+                }else {
+                    roboticArm.setUpDownPercentageTo(Constants.MIN_POS);
+                }
                 break;
             default:
                 System.out.printf("[WARNING]: unbekannter Befehl");

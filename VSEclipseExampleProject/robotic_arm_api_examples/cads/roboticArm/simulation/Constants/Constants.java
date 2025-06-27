@@ -27,4 +27,5 @@ public final class Constants {
 
     //Timer
     public static final int MAX_WAIT_TIMER = 250;
+    public static final int KEEP_ALIVE_TRIES = 3;
 }
