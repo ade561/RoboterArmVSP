@@ -36,10 +36,7 @@ public class HeartbeatReceiver {
                     long currentTime = System.currentTimeMillis();
                     if (currentTime - lastHeartbeatTime > Constants.MAX_WAIT_TIMER && !dispatcher.getHeartbeatAck()) {
                         increaseAckCounter();
-                        System.out.println("[HeartbeatReceiver] Timeout - Versuch: " + getAckCounter());
-
                         if(getAckCounter() > Constants.KEEP_ALIVE_TRIES) {
-                            System.out.println("[HeartbeatReceiver] Verbindung Abgebrochen");
                             robot.teardown();
                             timer.stop(); // Timer optional stoppen
                         }

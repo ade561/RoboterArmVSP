@@ -5,6 +5,8 @@ public final class Constants {
 
     //Robot parameters
     public static final int DEFAULT_POS = 50;
+    public static final int DEFAULT_GRIP = 100;
+
     public static final int CHANGEPOS = 2;
     public static final int BUFFER_SIZE = 1024;
     public static final String IP_ADDRESS = "192.168.178.48";

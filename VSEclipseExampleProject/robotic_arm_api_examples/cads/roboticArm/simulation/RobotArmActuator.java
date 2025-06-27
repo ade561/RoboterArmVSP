@@ -44,13 +44,13 @@ public class RobotArmActuator implements IRobotArmActuator {
                 break;
             case "openclose":
                 if(increase){
-                    roboticArm.setUpDownPercentageTo(Constants.MAX_POS);
+                    roboticArm.setOpenClosePercentageTo(Constants.MAX_POS);
                 }else {
-                    roboticArm.setUpDownPercentageTo(Constants.MIN_POS);
+                    roboticArm.setOpenClosePercentageTo(Constants.MIN_POS);
                 }
                 break;
             default:
-                System.out.printf("[WARNING]: unbekannter Befehl");
+                System.out.printf("[WARNING]: unbekannter Befehl " + direction);
                 break;
         }
     }
@@ -61,7 +61,7 @@ public class RobotArmActuator implements IRobotArmActuator {
         robot.waitUntilInitIsFinished();
         robot.setBackForthPercentageTo(Constants.DEFAULT_POS);
         robot.setLeftRightPercentageTo(Constants.DEFAULT_POS);
-        robot.setOpenClosePercentageTo(Constants.DEFAULT_POS);
+        robot.setOpenClosePercentageTo(Constants.DEFAULT_GRIP);
         robot.setUpDownPercentageTo(Constants.DEFAULT_POS);
     }
 
