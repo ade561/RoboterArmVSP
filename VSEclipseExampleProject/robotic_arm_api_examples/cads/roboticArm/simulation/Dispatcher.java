@@ -24,6 +24,11 @@ public class Dispatcher implements IDispatcher {
             case Constants.MOVE_BACKWARDS -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "backforth", false);
             case Constants.OPEN_GRIP -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "openclose", true);
             case Constants.CLOSE_GRIP -> robotArmActuator.move(robotArmActuator.getRoboticArm(), "openclose", false);
+            case Constants.DISCONNECT -> {
+                heartbeatReceiver.getServerStub().setDstPort(0);
+                heartbeatReceiver.getServerStub().setSeqNumber(0);
+                heartbeatReceiver.getServerStub().setDstIp(null);
+            }
             case Constants.ACK -> {
                 setHeartbeatAck(true);
                 if(heartbeatReceiver != null) {

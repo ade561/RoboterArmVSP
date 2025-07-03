@@ -17,6 +17,8 @@ public class HeartbeatReceiver {
     private final OneShotTimer timer;
     private int ackCounter = 0;
 
+
+
     private volatile long lastHeartbeatTime;
 
     public HeartbeatReceiver(ServerStub serverStub, ICaDSRoboticArm robot, Dispatcher dispatcher) {
@@ -60,6 +62,10 @@ public class HeartbeatReceiver {
 
     public void increaseAckCounter() {
         this.ackCounter++;
+    }
+
+    public ServerStub getServerStub() {
+        return serverStub;
     }
 }
 

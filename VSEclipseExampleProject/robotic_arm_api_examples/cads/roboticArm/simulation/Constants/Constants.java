@@ -25,7 +25,7 @@ public final class Constants {
     public static final int CLOSE_GRIP = 8;
     public static final int HEARTBEAT = 13;
     public static final int ACK = 14;
-    public static final int INITIAL_MSG = 15;
+    public static final int DISCONNECT = 15;
 
     //Timer
     public static final int MAX_WAIT_TIMER = 250;
