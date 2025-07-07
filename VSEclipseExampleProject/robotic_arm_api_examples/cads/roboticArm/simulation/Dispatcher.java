@@ -10,6 +10,7 @@ public class Dispatcher implements IDispatcher {
 
 
 
+
     public Dispatcher(){
     }
 
@@ -45,5 +46,9 @@ public class Dispatcher implements IDispatcher {
     public boolean getHeartbeatAck(){return heartbeatAck; }
     public void setHeartbeatReceiver(HeartbeatReceiver heartbeatReceiver) {
         this.heartbeatReceiver = heartbeatReceiver;
+    }
+
+    public HeartbeatReceiver getHeartbeatReceiver() {
+        return heartbeatReceiver;
     }
 }

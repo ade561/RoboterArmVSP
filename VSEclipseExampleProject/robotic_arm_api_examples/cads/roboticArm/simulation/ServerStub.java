@@ -12,12 +12,15 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.sql.Timestamp;
+import java.util.Observable;
 
-public class ServerStub implements IServerStub {
+public class ServerStub extends Observable implements IServerStub {
 
     private ResponseSender responseSender;
     private RobotArmActuator robotArmActuator;
     private Dispatcher dispatcher;
+
+
     private int srcPort;
     private int dstPort;
     private int seqNumber;
@@ -87,8 +90,10 @@ public class ServerStub implements IServerStub {
         setDstPort(srcPort);
         setSeqNumber(seqNumber);
 
-        // Führe den Befehl aus
         dispatcher.dispatchCommand(functionId, robotArmActuator);
+        setChanged();
+        notifyObservers();
+        clearChanged();
     }
     
     public void sendHeartbeat() {
@@ -106,5 +111,8 @@ public class ServerStub implements IServerStub {
         public void setSrcPort(int srcPort) { this.srcPort = srcPort; }
         public void setDstPort(int dstPort) { this.dstPort = dstPort; }
         public void setSeqNumber(int seqNumber) { this.seqNumber = seqNumber; }
+        public RobotArmActuator getRobotArmActuator() {return robotArmActuator;}
+        public Dispatcher getDispatcher() {return dispatcher;}
+
 
 }

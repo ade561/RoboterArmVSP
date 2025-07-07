@@ -4,12 +4,13 @@ import cads.roboticArm.simulation.Constants.Constants;
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
 import java.sql.Timestamp;
+import java.util.Observable;
 
 
 import cads.roboticArm.simulation.Constants.Constants;
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
-public class HeartbeatReceiver {
+public class HeartbeatReceiver extends Observable {
 
     private final ServerStub serverStub;
     private final ICaDSRoboticArm robot;
@@ -38,7 +39,13 @@ public class HeartbeatReceiver {
                     long currentTime = System.currentTimeMillis();
                     if (currentTime - lastHeartbeatTime > Constants.MAX_WAIT_TIMER && !dispatcher.getHeartbeatAck()) {
                         increaseAckCounter();
+                        setChanged();
+                        notifyObservers();
+                        clearChanged();
                         if(getAckCounter() > Constants.KEEP_ALIVE_TRIES) {
+                            setChanged();
+                            notifyObservers();
+                            clearChanged();
                             robot.teardown();
                             timer.stop(); // Timer optional stoppen
                         }

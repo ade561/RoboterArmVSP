@@ -10,6 +10,8 @@ import java.net.InetAddress;
 
 import org.cads.vs.roboticArm.hal.real.CaDSRoboticArmReal;
 import org.cads.vs.roboticArm.hal.simulation.CaDSRoboticArmSimulation;
+import org.cads.vs.roboticArm.logger.CaDSRoboticArmHALLogLevel;
+import org.cads.vs.roboticArm.logger.CaDSRoboticArmHALLogger;
 
 public class Server {
 
@@ -19,11 +21,14 @@ public class Server {
     private static Dispatcher dispatcher;
     private static HeartbeatReceiver heartbeatReceiver;
     private static HeartbeatSender heartbeatSender;
+    private static RobotArmObserver robotArmObserver;
     
     
     public static void main(String[] args) {
         try {
-        	//Roboter erstellen
+            CaDSRoboticArmHALLogger.init(CaDSRoboticArmHALLogLevel.DEBUG, true, "log.txt");
+
+            //Roboter erstellen
             roboticArm = new CaDSRoboticArmSimulation();
             //roboticArm = new CaDSRoboticArmReal("172.16.1.64", 50055);
             robotArmSensor = new RobotArmSensor(roboticArm);
@@ -41,6 +46,11 @@ public class Server {
             dispatcher.setHeartbeatReceiver(heartbeatReceiver);
 
             System.out.printf("UDP Server running on Port %d and address %s...\n", Constants.PORT, Constants.IP_ADDRESS);
+
+            robotArmObserver = new RobotArmObserver(stub);
+
+            stub.addObserver(robotArmObserver);
+            heartbeatReceiver.addObserver(robotArmObserver);
 
             heartbeatSender.start();
             heartbeatReceiver.startChecking();
