@@ -5,14 +5,22 @@ import cads.roboticArm.simulation.Interfaces.IRobotArmActuator;
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
 import java.util.Locale;
+import java.util.Observable;
 
-public class RobotArmActuator implements IRobotArmActuator {
+public class RobotArmActuator extends Observable implements IRobotArmActuator {
     private ICaDSRoboticArm roboticArm;
     private RobotArmSensor robotArmSensor;
+    private boolean gripperState;
 
     public RobotArmActuator(ICaDSRoboticArm roboticArm, RobotArmSensor robotArmSensor){
         this.roboticArm = roboticArm;
         this.robotArmSensor = robotArmSensor;
+
+        if(roboticArm.getOpenClosePercentage() != Constants.MAX_POS){
+            this.gripperState = false;
+        }else {
+            this.gripperState = true;
+        }
     }
 
 
@@ -50,9 +58,9 @@ public class RobotArmActuator implements IRobotArmActuator {
                 }
                 break;
             default:
-                System.out.printf("[WARNING]: unbekannter Befehl " + direction);
                 break;
         }
+        notifyWithMessage(Constants.CHANGE_POS);
     }
 
     @Override
@@ -74,4 +82,13 @@ public class RobotArmActuator implements IRobotArmActuator {
         return robotArmSensor;
     }
 
+    public boolean isGripperState() {
+        return gripperState;
+    }
+
+    public void notifyWithMessage(Object message) {
+        setChanged(); // darf hier aufgerufen werden, weil Dispatcher Observable erweitert
+        notifyObservers(message);
+        clearChanged();
+    }
 }

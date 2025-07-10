@@ -27,7 +27,17 @@ public final class Constants {
     public static final int ACK = 14;
     public static final int DISCONNECT = 15;
 
+    //Observer MSG
+    public static final String DISCONNECT_STRING = "Disconnect";
+    public static final String HEARTBEAT_ERROR = "HeartbeatError";
+    public static final String LOST_ACK =  "LostAck";
+    public static final String CHANGE_POS = "ChangePos";
+    public static final String INVALID_MSG = "invalidMsg";
+    public static final String TIMECHECK =  "TimeCheck";
+    public static final String CRITICAL_TIMECHECK =  "CriticalTimeCheck";
+
+
     //Timer
     public static final int MAX_WAIT_TIMER = 250;
-    public static final int KEEP_ALIVE_TRIES = 3;
+    public static final int KEEP_ALIVE_TRIES = 1;
 }

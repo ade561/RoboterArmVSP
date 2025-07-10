@@ -16,11 +16,39 @@ public class RobotArmObserver implements Observer{
 
     @Override
     public void update(Observable o, Object arg) {
-        logCurrentStatus();
+        if (arg instanceof String) {
+            String msg = (String) arg;
+            switch (msg) {
+                case Constants.CHANGE_POS:
+                    logPositionStatus();
+                    break;
 
+                case Constants.DISCONNECT_STRING:
+                    CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.CRITICAL, "RoboterArmObserver",
+                            "Kritisch: Roboter wurde getrennt!");
+                    break;
+                case Constants.CRITICAL_TIMECHECK:
+                    CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.CRITICAL, "RoboterArmObserver",
+                                    "Zeit: " + (stub.getDispatcher().getHeartbeatReceiver().getCurrentHeartbeatTime() - stub.getDispatcher().getHeartbeatReceiver().getLastHeartbeatTime()));
+                case Constants.HEARTBEAT_ERROR:
+                    CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.CRITICAL, "RoboterArmObserver",
+                            "Kritisch: Fehler beim Senden des Heartbeats!");
+                    break;
+
+                case Constants.LOST_ACK:
+                    CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.CRITICAL, "RoboterArmObserver",
+                            "Kritisch: Mehrfache Heartbeat-ACKs nicht empfangen! \n akuteller Counter: " + stub.getDispatcher().getHeartbeatReceiver().getAckCounter());
+                    break;
+                case Constants.INVALID_MSG:
+                    CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.DEBUG, "RoboterArmObserver",
+                            "Invalide empfangende Nachricht vom Dispatcher: " + msg);
+                default:
+                    break;
+            }
+        }
     }
 
-    private void logCurrentStatus() {
+    private void logPositionStatus() {
         // Holen der aktuellen Positionen des Roboterarms
         int leftRight = stub.getRobotArmActuator().getRoboticArm().getLeftRightPercentage();
         int upDown = stub.getRobotArmActuator().getRoboticArm().getUpDownPercentage();
@@ -47,20 +75,6 @@ public class RobotArmObserver implements Observer{
                     "Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: " + grip + "%");
         }
 
-        if(!stub.getDispatcher().getHeartbeatAck()){
-            CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.CRITICAL, "RoboterArmPositionObserver",
-                    "Kritisch: Heartbeat ACK wurde nicht empfangen!");
-        }
-
-        if(!stub.getRobotArmActuator().getRoboticArm().heartbeat()){
-            CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.CRITICAL, "RoboterArmPositionObserver",
-                    "Kritisch: Roboter hat kein Heartbeat!");
-        }
-
-        if(stub.getDispatcher().getHeartbeatReceiver().getAckCounter() > Constants.KEEP_ALIVE_TRIES){
-            CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.CRITICAL, "RoboterArmPositionObserver",
-                    "Kritisch: Roboter ist nicht verbunden!");
-        }
 
         // Protokolliere die Position des Roboterarms mit dem CaDS-Logger
         CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.DEBUG, "RoboterArmPositionObserver",

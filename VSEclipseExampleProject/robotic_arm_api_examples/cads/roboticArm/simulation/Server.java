@@ -50,7 +50,8 @@ public class Server {
             robotArmObserver = new RobotArmObserver(stub);
 
             stub.addObserver(robotArmObserver);
-            heartbeatReceiver.addObserver(robotArmObserver);
+            robotArmActuator.addObserver(robotArmObserver);
+            dispatcher.addObserver(robotArmObserver);
 
             heartbeatSender.start();
             heartbeatReceiver.startChecking();

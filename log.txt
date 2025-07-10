@@ -5,62 +5,381 @@
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
 [DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 50%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 50%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
-[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 50%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
-[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[CRITICAL] RoboterArmPositionObserver -> Kritisch: Heartbeat ACK wurde nicht empfangen!
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 50%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
-[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 50%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
-[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
 [DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 51%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
 [DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 53%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 54%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 55%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 57%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 59%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 61%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 62%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 64%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 66%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 68%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 70%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 72%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 74%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 76%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 78%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 80%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 79%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 77%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 75%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 73%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 71%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 69%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 67%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 65%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 63%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 61%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 59%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 57%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
 [DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 55%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 55%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 53%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 54%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
-[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 52%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
-[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[CRITICAL] RoboterArmPositionObserver -> Kritisch: Heartbeat ACK wurde nicht empfangen!
 [DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 51%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[CRITICAL] RoboterArmPositionObserver -> Kritisch: Heartbeat ACK wurde nicht empfangen!
 [DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 49%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 48%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
-[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
 [DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 47%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
-[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 46%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
 [DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 45%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
 [DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 43%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[CRITICAL] RoboterArmPositionObserver -> Kritisch: Heartbeat ACK wurde nicht empfangen!
 [DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 41%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 39%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 37%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 35%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 33%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 31%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 29%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 27%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 25%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 23%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 21%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 20%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 18%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 16%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 14%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 12%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 10%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 8%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 6%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 4%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 2%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Left/Right Position des Roboterarms hat den kritischen Wert erreicht: 0%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 0%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Left/Right Position des Roboterarms hat den kritischen Wert erreicht: 0%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 0%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Left/Right Position des Roboterarms hat den kritischen Wert erreicht: 0%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 0%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Left/Right Position des Roboterarms hat den kritischen Wert erreicht: 0%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 0%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Left/Right Position des Roboterarms hat den kritischen Wert erreicht: 0%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 0%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 1%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 3%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 5%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 7%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 9%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 11%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 15%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 17%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 19%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 21%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 23%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 25%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 27%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 29%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 31%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 33%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 35%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 37%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 39%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 41%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 43%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 44%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 46%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 48%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 50%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 52%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 54%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 56%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 58%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 60%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 62%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 64%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 66%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 68%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 70%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 72%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 74%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 76%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 78%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 80%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 82%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 84%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 86%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 88%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 90%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 91%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 93%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 95%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 97%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 99%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Left/Right Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 100%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Left/Right Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 100%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Left/Right Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 100%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Left/Right Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 100%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Left/Right Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 100%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 98%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 96%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 94%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 92%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 90%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 88%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 86%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 84%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 82%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 80%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 78%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 76%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 74%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 72%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 70%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 68%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 66%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 64%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 62%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 60%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 58%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 56%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 54%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 52%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 50%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 48%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 46%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 44%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 42%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
 [DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 40%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 39%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 38%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 39%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 36%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 39%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 34%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 39%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 32%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 39%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 30%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 39%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 28%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 39%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 26%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
 [WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
-[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 39%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 25%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 23%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 21%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 19%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 17%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 15%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 52%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 54%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 56%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 58%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 60%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 60%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 58%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 56%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 54%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 52%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 50%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 48%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 46%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 44%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 42%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 40%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 38%, Back/Forth: 50%, Grip: 100%
+[WARNING] RoboterArmPositionObserver -> Warnung: Grip Position des Roboterarms hat den kritischen Wert erreicht: 100%
+[DEBUG] RoboterArmPositionObserver -> Aktuelle Position des Roboterarms: Left/Right: 13%, Up/Down: 36%, Back/Forth: 50%, Grip: 100%
+[CRITICAL] RoboterArmObserver -> Kritisch: Mehrfache Heartbeat-ACKs nicht empfangen! 
+ akuteller Counter: 1
+[CRITICAL] RoboterArmObserver -> Zeit: 499
+[CRITICAL] RoboterArmObserver -> Kritisch: Fehler beim Senden des Heartbeats!
+[CRITICAL] RoboterArmObserver -> Kritisch: Mehrfache Heartbeat-ACKs nicht empfangen! 
+ akuteller Counter: 2
+[CRITICAL] RoboterArmObserver -> Zeit: 751
+[CRITICAL] RoboterArmObserver -> Kritisch: Fehler beim Senden des Heartbeats!
+[CRITICAL] RoboterArmObserver -> Kritisch: Roboter wurde getrennt!

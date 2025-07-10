@@ -91,9 +91,7 @@ public class ServerStub extends Observable implements IServerStub {
         setSeqNumber(seqNumber);
 
         dispatcher.dispatchCommand(functionId, robotArmActuator);
-        setChanged();
-        notifyObservers();
-        clearChanged();
+        dispatcher.notifyWithMessage("CHANGE_POS");
     }
     
     public void sendHeartbeat() {

@@ -4,7 +4,9 @@ import cads.roboticArm.simulation.Constants.Constants;
 import cads.roboticArm.simulation.Interfaces.IDispatcher;
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
-public class Dispatcher implements IDispatcher {
+import java.util.Observable;
+
+public class Dispatcher extends Observable implements IDispatcher {
     private boolean heartbeatAck = false;
     private HeartbeatReceiver heartbeatReceiver;
 
@@ -36,7 +38,8 @@ public class Dispatcher implements IDispatcher {
                     heartbeatReceiver.updateHeartbeatTimestamp();
                 }
             }
-            default -> System.out.printf("[Unbekannte Funktion] ID = %d\n", functionId);
+            default -> notifyWithMessage(Constants.INVALID_MSG);
+
         }
     }
 
@@ -51,4 +54,11 @@ public class Dispatcher implements IDispatcher {
     public HeartbeatReceiver getHeartbeatReceiver() {
         return heartbeatReceiver;
     }
+
+    public void notifyWithMessage(Object message) {
+        setChanged(); // darf hier aufgerufen werden, weil Dispatcher Observable erweitert
+        notifyObservers(message);
+        clearChanged();
+    }
+
 }

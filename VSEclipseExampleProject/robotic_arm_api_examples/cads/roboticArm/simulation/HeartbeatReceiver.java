@@ -10,7 +10,7 @@ import java.util.Observable;
 import cads.roboticArm.simulation.Constants.Constants;
 import org.cads.vs.roboticArm.hal.ICaDSRoboticArm;
 
-public class HeartbeatReceiver extends Observable {
+public class HeartbeatReceiver {
 
     private final ServerStub serverStub;
     private final ICaDSRoboticArm robot;
@@ -21,12 +21,14 @@ public class HeartbeatReceiver extends Observable {
 
 
     private volatile long lastHeartbeatTime;
+    private long currentHeartbeatTime;
 
     public HeartbeatReceiver(ServerStub serverStub, ICaDSRoboticArm robot, Dispatcher dispatcher) {
         this.serverStub = serverStub;
         this.robot = robot;
         this.dispatcher = dispatcher;
         this.lastHeartbeatTime = System.currentTimeMillis();
+        this.currentHeartbeatTime = lastHeartbeatTime;
         this.timer = new OneShotTimer(Constants.MAX_WAIT_TIMER);
     }
 
@@ -36,16 +38,13 @@ public class HeartbeatReceiver extends Observable {
         timer.start(() -> {
             try {
                 if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0 && robot.heartbeat()) {
-                    long currentTime = System.currentTimeMillis();
-                    if (currentTime - lastHeartbeatTime > Constants.MAX_WAIT_TIMER && !dispatcher.getHeartbeatAck()) {
+                    currentHeartbeatTime = System.currentTimeMillis();
+                    if (currentHeartbeatTime - lastHeartbeatTime > Constants.MAX_WAIT_TIMER && !dispatcher.getHeartbeatAck()) {
                         increaseAckCounter();
-                        setChanged();
-                        notifyObservers();
-                        clearChanged();
+                        dispatcher.notifyWithMessage(Constants.LOST_ACK);
+                        dispatcher.notifyWithMessage(Constants.CRITICAL_TIMECHECK);
                         if(getAckCounter() > Constants.KEEP_ALIVE_TRIES) {
-                            setChanged();
-                            notifyObservers();
-                            clearChanged();
+                            dispatcher.notifyWithMessage(Constants.DISCONNECT_STRING);
                             robot.teardown();
                             timer.stop(); // Timer optional stoppen
                         }
@@ -60,7 +59,7 @@ public class HeartbeatReceiver extends Observable {
     }
 
     public void updateHeartbeatTimestamp() {
-        lastHeartbeatTime = System.currentTimeMillis();
+        lastHeartbeatTime = currentHeartbeatTime;
     }
 
     public int getAckCounter() {
@@ -73,6 +72,14 @@ public class HeartbeatReceiver extends Observable {
 
     public ServerStub getServerStub() {
         return serverStub;
+    }
+
+    public long getCurrentHeartbeatTime() {
+        return currentHeartbeatTime;
+    }
+
+    public long getLastHeartbeatTime() {
+        return lastHeartbeatTime;
     }
 }
 
