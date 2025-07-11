@@ -36,7 +36,7 @@ set APP_HOME=%DIRNAME%..
 for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
 
 @rem Add default JVM options here. You can also use JAVA_OPTS and ROBOTER_ARM_VSP_OPTS to pass JVM options to this script.
-set DEFAULT_JVM_OPTS="-Dprism.verbose=true" "-Dprism.debug=true" "-Dprism.forceGPU=true" "-Djavafx.animation.fullspeed=true" "-XX:+UseG1GC" "-XX:+UseStringDeduplication" "-Dprism.order=d3d,es2,sw"
+set DEFAULT_JVM_OPTS="-Dprism.verbose=true" "-Dprism.debug=true" "-Dprism.forceGPU=true" "-Djavafx.animation.fullspeed=true" "-XX:+UseG1GC" "-XX:+UseStringDeduplication" "-Dprism.order=es2,sw"
 
 @rem Find java.exe
 if defined JAVA_HOME goto findJavaFromJavaHome
@@ -70,7 +70,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\RoboterArmVSP.jar;%APP_HOME%\lib\CaDSControlGUI.jar;%APP_HOME%\lib\CaDSLogger.jar;%APP_HOME%\lib\CaDSRoboticArmInterface.jar;%APP_HOME%\lib\javafx-fxml-17.0.15-win.jar;%APP_HOME%\lib\javafx-fxml-17.0.15.jar;%APP_HOME%\lib\javafx-controls-17.0.15-win.jar;%APP_HOME%\lib\javafx-controls-17.0.15.jar;%APP_HOME%\lib\javafx-graphics-17.0.15-win.jar;%APP_HOME%\lib\javafx-graphics-17.0.15.jar;%APP_HOME%\lib\javafx-base-17.0.15-win.jar;%APP_HOME%\lib\javafx-base-17.0.15.jar;%APP_HOME%\lib\slf4j-simple-2.0.7.jar;%APP_HOME%\lib\slf4j-api-2.0.7.jar;%APP_HOME%\lib\gson-2.10.1.jar
+set CLASSPATH=%APP_HOME%\lib\RoboterArmVSP.jar;%APP_HOME%\lib\CaDSControlGUI.jar;%APP_HOME%\lib\CaDSLogger.jar;%APP_HOME%\lib\CaDSRoboticArmInterface.jar;%APP_HOME%\lib\javafx-fxml-17.0.15-linux.jar;%APP_HOME%\lib\javafx-fxml-17.0.15.jar;%APP_HOME%\lib\javafx-controls-17.0.15-linux.jar;%APP_HOME%\lib\javafx-controls-17.0.15.jar;%APP_HOME%\lib\javafx-graphics-17.0.15-linux.jar;%APP_HOME%\lib\javafx-graphics-17.0.15.jar;%APP_HOME%\lib\javafx-base-17.0.15-linux.jar;%APP_HOME%\lib\javafx-base-17.0.15.jar;%APP_HOME%\lib\slf4j-simple-2.0.7.jar;%APP_HOME%\lib\slf4j-api-2.0.7.jar;%APP_HOME%\lib\gson-2.10.1.jar
 
 
 @rem Execute RoboterArmVSP

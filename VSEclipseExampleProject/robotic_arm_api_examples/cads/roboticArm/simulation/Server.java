@@ -29,8 +29,8 @@ public class Server {
             CaDSRoboticArmHALLogger.init(CaDSRoboticArmHALLogLevel.DEBUG, true, "log.txt");
 
             //Roboter erstellen
-            roboticArm = new CaDSRoboticArmSimulation();
-            //roboticArm = new CaDSRoboticArmReal("172.16.1.64", 50055);
+            //roboticArm = new CaDSRoboticArmSimulation();
+            roboticArm = new CaDSRoboticArmReal("172.16.1.63", 50055);
             robotArmSensor = new RobotArmSensor(roboticArm);
             robotArmActuator = new RobotArmActuator(roboticArm,robotArmSensor);
             dispatcher = new Dispatcher();

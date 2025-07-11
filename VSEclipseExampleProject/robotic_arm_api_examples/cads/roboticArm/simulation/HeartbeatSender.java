@@ -22,20 +22,20 @@ public class HeartbeatSender extends Thread {
                 // Warte, bis eine gültige Zieladresse da ist
                 if (serverStub.getDstIp() != null && serverStub.getDstPort() != 0 && robot.heartbeat()) {
                     serverStub.sendHeartbeat();
+                    //System.out.println("Server heartbeat sent to " + serverStub.getDstPort());
                     dispatcher.setHeartbeatAck(false);
                 } else if (!robot.heartbeat()) {
                     robot.teardown();
                     dispatcher.notifyWithMessage(Constants.DISCONNECT_STRING);
                 }
-                
-                Thread.sleep(Constants.MAX_WAIT_TIMER);
+
+                Thread.sleep(Constants.MAX_WAIT_TIMER); // Warte 2 Sekunden
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;
             } catch (Exception e) {
-                dispatcher.notifyWithMessage(Constants.HEARTBEAT_ERROR);
+                System.err.println("[Heartbeat Fehler] " + e.getMessage());
             }
         }
     }
 }
-

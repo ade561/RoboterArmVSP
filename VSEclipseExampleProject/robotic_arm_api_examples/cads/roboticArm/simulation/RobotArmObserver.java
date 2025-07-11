@@ -27,9 +27,9 @@ public class RobotArmObserver implements Observer{
                     CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.CRITICAL, "RoboterArmObserver",
                             "Kritisch: Roboter wurde getrennt!");
                     break;
-                case Constants.CRITICAL_TIMECHECK:
-                    CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.CRITICAL, "RoboterArmObserver",
-                                    "Zeit: " + (stub.getDispatcher().getHeartbeatReceiver().getCurrentHeartbeatTime() - stub.getDispatcher().getHeartbeatReceiver().getLastHeartbeatTime()));
+                //case Constants.CRITICAL_TIMECHECK:
+                //    CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.CRITICAL, "RoboterArmObserver",
+                //                    "Zeit: " + (stub.getDispatcher().getHeartbeatReceiver().getCurrentHeartbeatTime() - stub.getDispatcher().getHeartbeatReceiver().getLastHeartbeatTime()));
                 case Constants.HEARTBEAT_ERROR:
                     CaDSRoboticArmHALLogger.log(CaDSRoboticArmHALLogLevel.CRITICAL, "RoboterArmObserver",
                             "Kritisch: Fehler beim Senden des Heartbeats!");
